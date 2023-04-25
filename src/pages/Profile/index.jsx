@@ -10,10 +10,10 @@ export function Profile(){
   return (
     <Container>
       <header>
-        <a>
+        <Link to="/">
         <FiArrowLeft />
         Voltar
-        </a>
+        </Link>
       </header>
 
       <Form>

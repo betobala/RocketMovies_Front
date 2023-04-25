@@ -35,9 +35,9 @@ export function SignUp(){
 
         <ButtonBack>
         <FiArrowLeft/>  
-        <a href="/">
+        <Link to="/">
           Voltar para o login
-        </a>
+        </Link>
         </ButtonBack>
       </Form>
 

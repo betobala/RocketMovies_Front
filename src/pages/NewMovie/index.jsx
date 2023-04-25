@@ -20,10 +20,10 @@ export function NewMovie(){
 
       <main>
         <Form>
-          <a>
+          <Link to="/">
             <FiArrowLeft />
              Voltar
-           </a>
+           </Link>
 
 
           <Content>

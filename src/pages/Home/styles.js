@@ -50,5 +50,9 @@ export const Content = styled.div`
   }
 `
 
+export const NewMovie = styled(Link)`
+
+`
+
 
 
