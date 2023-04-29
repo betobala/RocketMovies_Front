@@ -19,7 +19,7 @@ export function Profile(){
       <Form>
         <Avatar>
           <img 
-            src="https://github.com/rodrigorgtic.png" 
+            src="https://github.com/betobala.png" 
             alt="Foto do usuário"
            />
            <label htmlFor="avatar">

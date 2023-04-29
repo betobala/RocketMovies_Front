@@ -11,11 +11,11 @@ export function Header(){
       <Profile to="/profile">
 
         <div>
-          <span>Rodrigo Gonçalves</span>
+          <span>Humberto Abreu</span>
           <a href="/">sair</a>
         </div>
         <img
-          src="https://github.com/rodrigorgtic.png"
+          src="https://github.com/betobala.png"
           alt="Foto do usuário"
           />
       </Profile>

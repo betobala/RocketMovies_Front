@@ -22,10 +22,10 @@ export function MoviePreview(){
               </NameRate>
                  <Author>
                     <img 
-                      src="https://github.com/rodrigorgtic.png" 
+                      src="https://github.com/betobala.png" 
                       alt="Foto do usuário"
                     />
-                    <p>Por Rodrigo Gonçalves</p>
+                    <p>Por Humberto Abreu</p>
                     <FiClock />
                     <p>23/05/22 às 08:00</p>
 
