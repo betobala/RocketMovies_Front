@@ -2,12 +2,13 @@ import { Container } from './styles'
 import { Tag } from '../Tag'
 import { Stars } from '../Stars'
 
-export function Note({data, Rate, ...rest}){
+export function Movie({data, ...rest}){
+
   return(
     <Container {...rest }>
       <h1>{data.title}</h1>
-      <Stars rate={data.rate}/>
-      <p>{data.content}</p>
+      <Stars rate={data.rating}/>
+      <p>{data.description}</p>
       {
         data.tags &&
         <footer>
@@ -19,3 +20,4 @@ export function Note({data, Rate, ...rest}){
     </Container>
   )
 }
+

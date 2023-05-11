@@ -64,7 +64,11 @@ export const Title_rate = styled.div`
   `
 export const Footer = styled.div`
   display: flex;
-  gap: 40px;
+  justify-content: center;
+
+  > button {
+    width: 30%;
+  }
   `
 
 

@@ -1,14 +1,25 @@
 import { FiPlus } from 'react-icons/fi'
 import { Header } from '../../components/Header'
 import { Button } from '../../components/Button'
-import { Note } from '../../components/Note'
+import { Movie } from '../../components/Movie'
 import { Container, Content, TopContent, NewMovie } from './styles'
+import { useSearch } from '../../hooks/search'
+import { useNavigate } from 'react-router-dom'
 
 
 export function Home(){
+  const { movies } = useSearch()
+  const navigate = useNavigate()
+
+  function handleDetails(id){
+    navigate(`/details/${id}`)
+  }
+
   return(
     <Container>
+
       <Header />
+
 
       <TopContent>
         <h1>Meus Filmes</h1>
@@ -19,41 +30,16 @@ export function Home(){
       </TopContent>
 
       <Content>
-        <Note data={{
-          title: 'Interstellar',
-          rate: '3',
-          content: 'Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma fazenda com sua família. Murphy, a filha de dez anos de Cooper, acredita que seu quarto está assombrado por um fantasma que tenta se comunicar com ela. Pai e filha descobrem que o "fantasma" é uma inteligência desconhecida que está enviando mensagens codificadas através de ',
-          tags: [
-            {id: '1', name: 'Ficção Cientifica'},
-            {id: '2', name: 'Drama'},
-            {id: '3', name: 'Família'}
-          ]
-          
-            }}/>
-        <Note data={{
-          title: 'Interstellar',
-          rate: '3',
-          content: 'Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma fazenda com sua família. Murphy, a filha de dez anos de Cooper, acredita que seu quarto está assombrado por um fantasma que tenta se comunicar com ela. Pai e filha descobrem que o "fantasma" é uma inteligência desconhecida que está enviando mensagens codificadas através de ',
-          tags: [
-            {id: '1', name: 'Ficção Cientifica'},
-            {id: '2', name: 'Drama'},
-            {id: '3', name: 'Família'}
-          ]
-          
-            }}/>  
-        <Note data={{
-          title: 'Interstellar',
-          rate: '3',
-          content: 'Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma fazenda com sua família. Murphy, a filha de dez anos de Cooper, acredita que seu quarto está assombrado por um fantasma que tenta se comunicar com ela. Pai e filha descobrem que o "fantasma" é uma inteligência desconhecida que está enviando mensagens codificadas através de ',
-          tags: [
-            {id: '1', name: 'Ficção Cientifica'},
-            {id: '2', name: 'Drama'},
-            {id: '3', name: 'Família'}
-          ]
-          
-            }}/> 
-            
-            
+        {
+          movies.map(movie => (
+            <Movie
+              key={String(movie.id)}
+              data={movie}
+              onClick={() => handleDetails(movie.id)}
+            />
+          ))
+        }
+
       </Content>
       
   

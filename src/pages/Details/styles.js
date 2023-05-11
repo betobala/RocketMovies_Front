@@ -17,6 +17,8 @@ export const Container = styled.div`
     margin-bottom: 10px;
     padding: 0 123px;
   }
+
+  
 `
 
 export const MovieInfo = styled.div`
@@ -36,8 +38,7 @@ export const MovieInfo = styled.div`
   padding-left: 123px;
   padding-right: 10px;
   margin-right: 123px;
-  
-  
+
 `
 export const NameRate = styled.div`
   display: flex;
@@ -62,8 +63,8 @@ export const Author = styled.div`
   grid-area: author;
 
  > img {
-  width: 16px;
-  height: 16px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
  }
  
@@ -85,3 +86,13 @@ export const Description = styled.div`
   margin-top: 40px;
   
 `
+
+export const Footer = styled.div`
+  display: flex;
+  justify-content: center;
+
+  > button {
+    width: 30%;
+    margin-top: 60px;
+  }
+  `
